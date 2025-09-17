@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Modal, View, Text, TextInput, Button, StyleSheet } from "react-native";
-
 export default function SuggestionModal({ visible, onClose }) {
   const [vehiculo, setVehiculo] = useState("");
   const [parada, setParada] = useState("");
