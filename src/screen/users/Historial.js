@@ -27,10 +27,10 @@ export default function Historial( { navigation } ) {
                 onPress={() => navigation.navigate("Devolucion")}
               />
               <Iconos
-                nombre="Historial"
+                nombre="HOme"
                 icono="history"
                 color="#FF9800"
-                onPress={() => navigation.navigate("Historial")}
+                onPress={() => navigation.navigate("HomeScreen")}
               />
             </View>
 
