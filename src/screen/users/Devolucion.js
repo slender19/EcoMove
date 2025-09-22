@@ -1,9 +1,10 @@
 // Devoluciones.js
 import React, { useContext, useState } from "react";
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Alert } from "react-native";
-import { HistorialContext } from "../components/HistorialContext";
-import Header from "../components/header";
-import Iconos from "../components/Iconos";
+import { HistorialContext } from "../../components/HistorialContext";
+import Header from "../../components/header";
+import Iconos from "../../components/Iconos";
+import LogoutButton from "../../components/LogoutButton";
 
 export default function Devoluciones({ navigation }) {
   const { historial, setHistorial } = useContext(HistorialContext);
@@ -69,15 +70,16 @@ export default function Devoluciones({ navigation }) {
               <Text style={styles.cell}>🛴 {item.transporte}</Text>
               <Text style={styles.price}>💰 {item.costo}</Text>
               <Text
-                style={[
-                  styles.estado,
-                  item.estado === "pendiente"
-                    ? styles.pendiente
-                    : styles.terminado,
-                ]}
-              >
-                {item.estado.toUpperCase()}
-              </Text>
+                  style={[
+                    styles.estado,
+                    item.estado === "pendiente"
+                      ? styles.pendiente
+                      : styles.terminado,
+                  ]}
+                >
+                  {item.estado ? item.estado.toUpperCase() : ""}
+                </Text>
+
 
               {item.estado === "pendiente" ? (
                 <TouchableOpacity
@@ -93,12 +95,14 @@ export default function Devoluciones({ navigation }) {
           )}
         />
       )}
+      {/* Botón de cerrar sesión reutilizable */}
+       <LogoutButton navigation={navigation} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#e0f7fa", padding: 20 },
+  container: { flex: 1, backgroundColor: "#d0f5d9", padding: 20 },
   subtitle: { fontSize: 18, fontWeight: "bold", marginTop: 20, marginBottom: 10 },
   menu: { flexDirection: "row", justifyContent: "space-around" },
   card: {

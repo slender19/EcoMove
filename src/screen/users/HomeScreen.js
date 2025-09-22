@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Text } from "react-native";
 import { View, StyleSheet } from "react-native";
-import Header from "../components/header";
-import HistorialCard from "../components/HistorialCard";
-import SuggestionBubble from "../components/SuggestionBubble";
-import SuggestionModal from "../components/SuggestinModal";
-import Iconos from "../components/Iconos";
+import Header from "../../components/header";
+import HistorialCard from "../../components/HistorialCard";
+import SuggestionBubble from "../../components/SuggestionBubble";
+import SuggestionModal from "../../components/SuggestinModal";
+import Iconos from "../../components/Iconos";
 
 export default function HomeScreen({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false);

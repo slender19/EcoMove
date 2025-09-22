@@ -49,7 +49,7 @@ export default function AppNavigator() {
 
         {/* DASHBOARD USUARIO */}
         <Stack.Screen
-          name="UserHome"
+          name="HomeScreen"
           component={HomeScreen}
           options={{ title: "Ecomove 🚲" }}
         />

@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
-import { HistorialContext } from "../components/HistorialContext";
-import Header from "../components/header";
-import NavigationMenu from "../components/NavigationMenu";
-import HistorialCard from "../components/HistorialCard";
-import Iconos from "../components/Iconos";
+import { HistorialContext } from "../../components/HistorialContext";
+import Header from "../../components/header";
+import LogoutButton from "../../components/LogoutButton";
+import NavigationMenu from "../../components/NavigationMenu";
+import HistorialCard from "../../components/HistorialCard";
+import Iconos from "../../components/Iconos";
 
 export default function Historial( { navigation } ) {
   const { historial } = useContext(HistorialContext);
@@ -51,6 +52,8 @@ export default function Historial( { navigation } ) {
           )}
         />
       )}
+      {/* Botón de cerrar sesión reutilizable */}
+      <LogoutButton navigation={navigation} />
     </View>
   );
 }

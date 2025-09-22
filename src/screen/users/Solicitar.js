@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert, Image } from "react-native";
-import Header from "../components/header";
-import NavigationMenu from "../components/NavigationMenu";
-import SelectorCard from "../components/SelectorCard";
-import { HistorialContext } from "../components/HistorialContext";
-import LogoutButton from "../components/LogoutButton";
+import Header from "../../components/header";
+import NavigationMenu from "../../components/NavigationMenu";
+import SelectorCard from "../../components/SelectorCard";
+import { HistorialContext } from "../../components/HistorialContext";
+import LogoutButton from "../../components/LogoutButton";
 import { Button } from "react-native";
 
 export default function Solicitar({ navigation }) {

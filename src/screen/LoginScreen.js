@@ -24,7 +24,7 @@ export default function LoginScreen({ navigation }) {
     if (result.user.role === "admin") {
       navigation.replace("AdminHome");
     } else {
-      navigation.replace("UserHome");
+      navigation.replace("HomeScreen");
     }
   };
 
